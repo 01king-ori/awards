@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'css/static.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <h3 style="color:#8da242;text-align: center;"><u>PROJECTS READY TO BE REVIEWED</u></h3>
+  <br>
+  <div class="photos">
+    
+    {% for project in projects %}
+
+      <div class="photo" style="background-color: black;color:#8da242">
+        <h3 style="text-align: center;"><strong><u>{{project.title}}</u></strong></h3>
+        <img class="card-img-top" src="{{project.landing_page.url}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{project.description |truncatechars_html:170}}</p>
+          <hr>
+          <p style="text-align: center;">Owner  :<strong>   {{project.user}}</strong></p>
+          <hr>
+          <a href="/project/{{project.id}}" class="view2">REVIEW</a>
+        </div>
+      </div>
+    {% endfor %}
+    
+  </div>
+    <br>
+    <br>
+    <br>
+</div>
+
+{% endblock %}
+
+
+
+  
