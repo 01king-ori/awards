@@ -5,10 +5,10 @@
 Vincent KIng'ori
   
 # Description  
-This project allows users to post their projects for other users to rate according to design, usability and content.
+This project allows users to post their projects for other users to rate according to design, usability and content.one has to create their own profile for them to be able to upload their projects for people to rate
   
- 
-  
+ ## Live link
+  https://kingawards.herokuapp.com/
 ## Technology used  
   
  python
